@@ -5,7 +5,9 @@ int main( )
    int *p;
 
    /*Array declaration*/
-   int val[7] = { 11, 22, 33, 44, 55, 66, 77 } ;
+
+   //pointer points to first value in our array!!!
+   int val[7] = { 11, 22, 33, 44, 55, 66, 77 } ;  // 7 elements here
 
    /* Assigning the address of val[0] the pointer
     * You can also write like this:

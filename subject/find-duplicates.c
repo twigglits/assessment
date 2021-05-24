@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define HASHZIZE 101  //size of our hashtable(dictionary)
+#define HASHSIZE 101  //size of our hashtable(dictionary)
 #define MAXCHAR 10000
 
 typedef struct Dict
@@ -48,7 +48,7 @@ int main(int argc, char **argv)
 	char delimit[]=":\n";  //whitespace delimiters!!!
 	unsigned int toknum = 0;  //values can only be positive
 
-	char pairs[HASHZIZE];  //size of 101
+	char pairs[HASHSIZE];  //size of 101
 
 	//method that reads text and displays it.
 	while (fgets(str, MAXCHAR, input_file) != NULL)   // see if we can read and do split operation on : and put them into a struct.
@@ -59,8 +59,8 @@ int main(int argc, char **argv)
 			printf("%d: %s\n", ++toknum, token);  //toknum gives us our index number
 			token = strtok(NULL, delimit);
 
-			pairs[toknum] = token; //want to increment my array
-
+			pairs[toknum] = token; //want to increment my array can't point to same place in memory
+			//printf("%p")
 			//or put it into an array
 			//here insert it into our Dict Data structure
 		}
