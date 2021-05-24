@@ -1,16 +1,26 @@
 #include <stdio.h>
-#include <string.h>
-
-int main(void)
+int main( )
 {
-    int toknum = 0;
-    char src[] = "Hello,, world!";
-    const char delimiters[] = ", !";
-    char *token = strtok(src, delimiters);
-    while (token != NULL)
-    {
-        printf("%d: [%s]\n", ++toknum, token);  //this does pre increment of toknum integer
-        token = strtok(NULL, delimiters);
-    }
-    /* source is now "Hello\0, world\0\0" */
+   /*Pointer variable*/
+   int *p;
+
+   /*Array declaration*/
+   int val[7] = { 11, 22, 33, 44, 55, 66, 77 } ;
+
+   /* Assigning the address of val[0] the pointer
+    * You can also write like this:
+    * p = var;
+    * because array name represents the address of the first element
+    */
+   p = &val[0];
+
+   for ( int i = 0 ; i<7 ; i++ )
+   {
+      printf("val[%d]: value is %d and address is %p\n", i, *p, p);
+      /* Incrementing the pointer so that it points to next element
+       * on every increment.
+       */
+      p++;
+   }
+   return 0;
 }
