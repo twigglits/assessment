@@ -2,18 +2,19 @@
 int main( )
 {
    /*Pointer variable*/
-   int *p;
+   int *p;       // this is my pointer variable
 
    /*Array declaration*/
 
    //pointer points to first value in our array!!!
-   int val[7] = { 11, 22, 33, 44, 55, 66, 77 } ;  // 7 elements here
+   int val[7] = {11, 22, 33, 44, 55, 66, 77};  // 7 elements here
 
    /* Assigning the address of val[0] the pointer
     * You can also write like this:
     * p = var;
     * because array name represents the address of the first element
     */
+   
    p = &val[0];
 
    for ( int i = 0 ; i<7 ; i++ )

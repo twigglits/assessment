@@ -60,6 +60,7 @@ int main(int argc, char **argv)
 			token = strtok(NULL, delimit);
 
 			pairs[toknum] = token; //want to increment my array can't point to same place in memory
+			printf("");
 			//printf("%p")
 			//or put it into an array
 			//here insert it into our Dict Data structure
