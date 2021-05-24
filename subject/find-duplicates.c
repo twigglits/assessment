@@ -12,8 +12,6 @@ typedef struct Dict
 	char value[MAXCHAR];	   //char value that contains alpha numeric characters
 } Dict;
 
-
-
 int main(int argc, char **argv)
 {
 	struct Dict *next;
