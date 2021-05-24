@@ -1,0 +1,53 @@
+# Find duplicates
+
+In standard C, write the find-duplicates utility:
+find-duplicates should parse dictionary-like input files and show values
+associated to several keys.
+
+Its usage should be:
+  find-duplicates [input-files ...]
+
+## Input description
+The input files follow this syntax:
+* <key>:<value>
+* key contain only digits
+* key should represents an integer between 0 and 4294967294
+* value should contain only alphanumerical characters [0-9a-zA-Z]
+* malformed and empty lines must be ignored
+
+The input files will only contain printable ascii characters (no spaces)
+You can assert that a line size will never be over 1KB
+
+## Output description
+find-duplicates then processes the concatenation of all is inputs specified on
+the command line, or uses standard input if none is given.
+find-duplicates outputs to standard output the list of values associated to more
+than one different key and the number of different keys, one per line.
+
+## Example
+(x is associated to two keys: 7 and 9, y is associated to only one: 8)
+
+Input:     Output:
+7:foo      foo:2
+8:bar
+9:foo
+
+## Given files
+A Makefile has been given for your convenience with the following targets:
+* find-duplicates: (default target) builds find-duplicates from SOURCES variable (find-duplicates.c)
+* test: processes sample-input.txt and check its output against sample-output.txt
+* help: displays a summary of provided targets
+You may choose to use it or ignore it.
+
+## What we will look for
+Your work will be judged on:
+* correctness and sturdiness first
+* compilation without warnings
+* presentation, readability, documentation.
+* choice of algorithms, implementation, performance
+* tests, possible extensions ...
+
+
+  We do not insist on an optimal solution, however we ask for a small text
+  document (in a comment block of your file) describing the work
+  accomplished: limitations, possible improvements ...
